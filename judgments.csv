@@ -1,0 +1,131 @@
+"minami_kaz(judge)","minami_kaz(comment)","teraim(judge)","teraim(comment)","proj","ver","nid","path","lnum"
+"M2","Compute the Cholesky factorization A = U'*U
+コレスキー分解と理解。本来ブロック化できるのでこのように判定。","M1","","NEKCEM_git","1e1977e","8197","libs/netlib/lapack.f","262097"
+"NonKernel","コメントからファイルからのデータ収集と判断","NonKernel","計算データのセットアップと判定","carma-miriad_git","34b15af","53794","src/prog/misc/listobs.for","181"
+"M5","タイムステップループ内のソルバー内の処理。カーネルと想定。配列代入処理ループ。","NonKernel","初期化","CM1_git","fc4db52","4799","src/bc.F","2054"
+"M5","計算ルーチンの中なのでカーネルとみなす。
+ソースより判断。","M5","リダクション","VAPO_git","d93599f","94838","Precombustion/Mdot/OFShift/ver01/Mdot0_03/CALC/PreCEA/MainCEA/cea/cea2.f","1332"
+"Ignored","","NonKernel","","oorb_git","0ec2651","4042","classes/StochasticOrbit_class.f90","9296"
+"M2","FFTの処理の一部．原理的にある程度ブロッキング可能と判定した。","Other","","elk_git","610ccd4","11388","src/fftlib/cfftnd.f90","1123"
+"M6","通常のイタレーション構造がないように見えるが、","Other","手続きinvfftが不明。ただしカーネルぽい。","q-e_git","1f12d22","34168","GWW/pw4gww/semicore.f90","47"
+"M5","LAPACKのテストルーチン。アプリの形にもなっていない。","M5","#test","blas-lapack-ffi_git","781517b","2232","unused/lapack_cwrapper/testing/main/LIN/claptm.f","173"
+"NonKernel","メインのタイムステップループでなくカーネルでないと判断。","NonKernel","ループボディ小さい。","dissertaion_phd_tamu_git","5c1d609","553","chap_5_active_trusses/codes_linear_tetra_hedral_truss/Elec_Mech_FEM/src/femgeometry.f90","422"
+"NonKernel","アプリ自体が計算本体でない模様。この部分も処理の振り分けのためのループ。","NonKernel","以下に対応するブロック
+- TEST(17) WRITE OUT READ-IN COEFFICIENTS  (I/O UNITS 12 & 16)
+- TEST(18) ENTHALPY IS ABSOLUTE","VAPO_git","d93599f","21011","Precombustion/Mdot/OFShift/ver01/Mdot0_07/CALC/MainCEA/pac/pac99.f","4957"
+"M5","Determine the diffuse transmission and reflection coefficients.
+コメントより計算処理であると判断．ループの深い部分にありメインの計算の一つと判断。","NonKernel","計算量は小さいと判断","UM-ppsrc-vamkK_git","cd40696","19601","atmosphere/boundary_layer/dust_srce.f90","174"
+"M5","Determine the diffuse transmission and reflection coefficients.
+コメントより計算処理であると判断．","M3","M5ぽいが、nsw6の雰囲気、演算が多いような印象","UM-ppsrc-vamkK_git","cd40696","11162","atmosphere/radiance_core/trans_source_coeff.f90","147"
+"Other","LAPACKの一部であるが、テストプログラム。","M1","#test","numpy-vendor_git","9820ec7","135601","atlas/src/lapack-lite-3.1.1/SRC/dlasyf.f","542"
+"M5","LAPACK test routineでありアプリの形でない。ZLASCL内の処理。カーネルでないと判断。","M5","#test","OpenBLAS_git","a96a4cb","96450","lapack-netlib/SRC/zlascl.f","291"
+"M5","divide & conquer法の特異値分解計算ライブラリの一部．ブロック化の手法が適用できるか判断できない．","M5","#test","PROPACK_git","2465f89","4448","complex8/Lapack_Util/slasd2.f","240"
+"NonKernel","ポストプロセスの一部でありカーネルでないと判定。","NonKernel","ユーティリティの一部","jules-ppsrc-valpm_git","30e6a33","54670","utility/fieldcalc/cld_turb.f90","191"
+"NonKernel","ソースよりサーチとwrite処理と判断。","NonKernel","","VAPO_git","d93599f","130019","N2O/ISP_CH4/LOX/MIXED_1_7/CEA/cea/cea2.f","4648"
+"M5","アプリの種類は不明。深いループにありカーネルと判断。
+二次元の配列を使用し3重のループ演算となっているため、
+原理的にブロッキング可能と判断。","M5","","gops_git","3de1c58","34898","GMIN/CSMinit.f90","2991"
+"M5","ソースプログラムより判定。","M5","初期化しているような印象","VAPO_git","d93599f","241738","Precombustion/Mdot/temp/OFShift/PreCEA/Mycompile.f","388"
+"NonKernel","タイムステップループ外なのでカーネルでないと判定。","M5","三重ループ","ED2_git","8ae79fd","5384","BRAMS/src/isan/refstate.f90","300"
+"Ignored","","NonKernel","ループボディ（演算少ない）が小さいと判定","danfe_git","5013c77","2461","libsrc/k_mesh.f","6495"
+"NonKernel","ソースよりファイルのREAD処理と判断。","NonKernel","カーネルにみえない。","VAPO_git","d93599f","275330","N2O/ISP_CH4/LOX/MIXED_1_5/CEA/cea/b1b2b3.f","162"
+"M5","FFTのテストプログラム。","M5","FFTの計算の一部","GISS_climate_model_git","3b41985","2397","model/FFT288.f","370"
+"M5","サブルーチンのコメントよりコロイド粒子のインタラクション計算のよう。収束ループ内にありカーネルと判断。","M6","典型的な間接参照","MCF_git","7fb9b4e","2390","mcf/src/particles_collect_colloid_interaction.F90","93"
+"M5","ソースより判定。","M5","","VO63-gotm_git","b8770b1","1268","code/shelfbreak/src/wind_stress.f90","34"
+"M1","BLAS_gemmを呼んでいる．ブロック毎の処理を行っているものと判定．","M1","","GITM_git","233d5c7","1860","share/Library/src/ModLinearSolver.f90","1192"
+"NonKernel","LAPACKテストルーチンの一部であるが、カーネルとはしない。","NonKernel","カーネルの一部と判定","numpy-vendor_git","9820ec7","8577","atlas/src/lapack-lite-3.1.1/TESTING/LIN/slattb.f","206"
+"M5","lapackのZLASRサブルーチンの一部．","M5","","elk_git","610ccd4","6877","src/LAPACK/zlasr.f","281"
+"M5","イタレーションループ内にありカーネルとする。計算ループ内にwrite文がある。","NonKernel","","saga5.5_git","7c99e8f","18234","src/copy021014/mh.f","530"
+"NonKernel","サブルーチン呼び出し後の後処理と推定。内積の計算を実施している。","M5","reduction","CAABA_git","dfcb68b","72","mecca/kpp/drv/general_complete.f90","64"
+"Other","LAPACK test routineでありアプリの形でない。
+カーネルでないと判断。","M4","ライブラリのルーチンを呼び出している。M1の可能性もあるが、ブロックM4が長めなのでM4と判定。","OpenBLAS_git","a96a4cb","98449","lapack-netlib/TESTING/EIG/dget38.f","186"
+"Ignored","計算カーネルではないように見えるが判断がつかない。","NonKernel","回転数小さい","pyavl_git","714c227","669","avl/src/amode.f","922"
+"M5","Carry out closure scaling and cfl scaling on updraught values
+コメントより計算処理と判定。ループの深いところでありメイン計算の一つと判断。","M5","","UM-ppsrc-vamkK_git","cd40696","33306","atmosphere/convection/update_conv_diags.f90","489"
+"Other","メインドライバー内なのでカーネルと判断。
+処理については不明。","M4","実質2～3重ループ。最内が複雑。","abinit_git","1436bcc","7934","src/63_bader/cpdrv.F90","536"
+"M5","メインルーチンの中にありカーネルと判断。ソースよりタイプを判定。","NonKernel","ループボディ小さい、演算負荷小さい、カーネルではないと判定","fmmlib3d_git","af4f0a0","1909","src/helmrouts3d.f","3578"
+"NonKernel","500行ほどの小さなプログラム。fftやspline処理を行っているが計算アプリケーションのカーネルには見えない。","NonKernel","初期値、パラメタ設定にみえる。","powerspec_git","b4491a8","390","fiber_collision/FFT-fkp-mock-dr11-v7p0-noweight_960grid.f","86"
+"NonKernel","コメントでは量子計算のよう。ただ大きなループ構造等がなく判断がつかないためNotKernelとした。","NonKernel","ループボディ小さい","ecalj_git","b163165","40394","fpgw/main/hx0fp0.sc.m.F","408"
+"M5","LAPACKルーチンZLASRの一部．ブロッキングの可能性はあるが現在のコーディングで判定．","M5","lapackの一部","espresso-4.0.3_git","2e70494","38645","flib/lapack_atlas.f","10979"
+"M5","タイムステップループ内にありカーネルと判定。
+3次元配列アクセスのソースを見て判定。","M5","","ED2_git","8ae79fd","12491","BRAMS/src/turb/turb_diff.f90","247"
+"NonKernel","最上位ルーチンma2のコメントと上位ルーチンdumpitの名称より主要計算部ではないと判断。この部分はmin/max処理を実施している。","NonKernel","ダンプ処理の一部、何かの最大最小を求めている。","CADD_git","3027601","1717","Modular/tecplotnl.f","440"
+"M5","タイムステップループ内のソルバー内の処理。カーネルと想定。差分処理ループ。","M5","ステンシル","CM1_git","fc4db52","2262","src/sfcphys.F","246"
+"M1","BLASの３角行列処理のルーチン","M5","#test","ode-ampsim_git","9faa6c8","10735","lib/flens/cxxblas/netlib/blas/dtrsm.f","228"
+"M5","タイムステップループ内にあるのでカーネルと判定。差分計算であることとB/F値から判定。","M5","典型的な3重ループ、ステンシル","ED2_Erelax_git","206f380","11969","BRAMS/src/turb/rgrad.f90","376"
+"M5","テストプログラムの一部。","NonKernel","定義かそれに類する処理のみ","OpenBLAS_git","a96a4cb","132221","ctest/c_cblat2.f","2874"
+"Other","収束ループ内にありカーネルと判断。
+セル内の粒子の２体計算をやっているようだが、詳細は不明。
+２体力なら低B/Fと出来るが不明。","M6","","MCF_git","7fb9b4e","2820","mcf/src/particles_compute_density.F90","578"
+"NonKernel","I/O処理のように見える。","NonKernel","","VAPO_git","d93599f","72339","Precombustion/Mdot/OFShift/ver01/Mdot0_045/CALC/MainCEA/cea/cea2.f","1214"
+"M5","カーネル内のメイン処理内にあるのでカーネルとみなす。","M5","回転数MXFLCLがそれほど大きな小さいように見えるが、形としてはカーネルの一部であると判定する。","open-fvs_git","ec493a7","37202","fire/base/src/fmsoilheat.f","89"
+"NonKernel","ループ内部の回転数が少なくカーネルには見えなかった。","NonKernel","ループ回転数が小さいのでこの部分ではカーネルと判定。ただしそのしたの手続きで演算が大分あるような雰囲気はある。","HZG_MatrixElement_git","a315942","4900","HiggsZGAnalyzer/hzgammaME/MCFM-6.6/QCDLoop/ff/ffdcxs.f","165"
+"Other","繰り返しループの中にありカーネルと判定。callしているctqmc_make_compareの処理が不明のため判断できない。","NonKernel","カーネルはこの階層より下にあると推測","iqist_git","35ea908","3347","src/ctqmc/azalea/ctqmc_flavor.f90","1810"
+"M5","アプリの種類は不明。深いループにありカーネルと判断。
+ソースコードを見て判断。","M5","","gops_git","3de1c58","34718","a/g.CSMinit.f90","4781"
+"M6","繰り返しループ内にありカーネルと判定。
+LISTを使用しており判断した。","NonKernel","定義のみ","PyFVS_git","6b84273","43373","rd/src/rdsprd.f","217"
+"M5","何らかの計算処理を行っているのでカーネルと判定。","M5","配列eigenvalueはj,kのループ、配列DFT_dosはiのループ","DOS_git","2a96991","26","dos_kpt/dos_kpt_fixed.f90","91"
+"M5","メイン処理の内部なのでカーネルと判定。","M5","reduction","DFPT-tetra_git","22abe7a","47686","PW/src/vcsubs.f90","823"
+"NonKernel","境界条件用設定ルーチン内の処理のためカーネルとしない。","NonKernel","ループボディ小さい。","dissertaion_phd_tamu_git","5c1d609","685","chap_4_structural_analyses/afc_unit_cell/wxp_different_frequencies/1540214.login006.sc.cluster.tamu/src/femgeometry.f90","2614"
+"M5","DLATTB generates a triangular test matrix in 2-dimensional storage. LAPACKのサブルーチン．","M5","#test","coin_git","b377a3f","55494","ThirdParty/lapack/TESTING/LIN/dlattb.f","641"
+"NonKernel","ポテンシャルテーブルの設定の一部。カーネルと見なさない。
+初期処理のように見える。","NonKernel","このprogram全体がメインとなる計算部分がないようにみえる。","squarer_git","5c31ab0","1797","sqdir/old_potgens/potgen_bomc4.f","107"
+"M5","ステンシル計算のループ","M5","粒子数を回転数にしているようにみえる","Hybrid-code-fortran-90_git","65eb928","132","gutsp.f90","239"
+"M2","アプリの種類は不明。深いループにありカーネルと判断。
+1次元の配列を使用し2重のループ演算となっているため、
+原理的にブロッキング可能と判断。(kは3なのでルー目としない。","M5","","gops_git","3de1c58","51478","a/g.vgw.f90","1018"
+"M5","テストルーチンであるがアプリとしてのイタレーション計算の中のためカーネルと判断。ソースコードより判断。","NonKernel","ループボディ小さい","jburkardt-f_git","2a3860f","87348","slatec/slatec.f90","150705"
+"M5","タイムステップループ内のソルバー内の処理。カーネルと想定。min/max処理ループ。","NonKernel","補正計算
+カーネルに該当する処理はこれより前","CM1_git","fc4db52","4834","src/bc.F","2297"
+"M2","コメントよりフーリエ変換(FFTでなく)の一部と判断．フーリエ変換なら原理的にブロッキング可能と判断した．","M5","内積ルーチンらしきものとリダクション","espresso-4.0.3_git","2e70494","20892","W90/src/hamiltonian.F90","261"
+"M5","LAPACKルーチンDLASRの一部．ブロッキングの可能性はあるが現在のコーディングで判定．","M5","","cp2k_git","e340926","5806","potentials/Goedecker/pseudo/v2.3/sub_lapack.F","2796"
+"M4","何らかの計算処理の中なのでカーネルと判断。
+B/F値を信じて判断した。","NonKernel","回転数が少ない印象","VAPO_git","d93599f","155712","Precombustion/Mdot/OFShift/ver01/Mdot0_04/CALC/PreCEA/MainCEA/pac/pac99.f","2851"
+"Other","LAPACKライブラリDLALN2のテストルーチン内のループ。","M4","#test","OG-Lapack_git","4a24271","110292","TESTING/EIG/dget31.f","189"
+"M2","ソースとコメントを見ると直接法のMatrixソルバーのよう。
+基本的にブロッキングができる。","M5","","VAPO_git","d93599f","74004","Precombustion/Mdot/test/PreCEA/pac/pac99.f","2769"
+"M5","繰り返しループ内にありカーネルと判断
+ソースよりタイプを判断","Other","呼び出している手続きshearmが不明","Perplex_git","7f830a1","8999","source/olib.f","91"
+"M5","Carry out closure scaling and cfl scaling on updraught values
+コメントより計算処理と判定。ループの深いところでありメイン計算の一つと判断。","M5","","UM-ppsrc-vamkK_git","cd40696","25919","atmosphere/convection/shallow_conv-shconv5a.f90","2410"
+"M2","Compute the change of xc potential due to the perturbation
+コメントより計算カーネルと判断","Other","axpyが含まれる。含まれる手続きがカーネルぽい。全体として分類不能。","quantum-espresso_git","37def7f","26130","PH/addnlcc.f90","81"
+"M5","ソースを見て判断","NonKernel","ループボディ小さい。","VAPO_git","d93599f","392599","Precombustion/Mdot/OFShift/ver01/Mdot0_075/CALC/PreCEA/cea2.f","1681"
+"Other","コメントよりLAPACKのテストルーチン。アプリの形にもなっていない。","Other","ライブラリのテストルーチン。","belgiovi-clmagma_git","516ca83","10037","testing/lin/sdrvrf3.f","116"
+"M2","アプリの種類は不明。深いループにありカーネルと判断。
+二次元の配列を使用し3重のループ演算となっているため、
+原理的にブロッキング可能と判断。","M5","","gops_git","3de1c58","28723","G/AT.f","59"
+"Other","surfがメインの処理でありそれを含んでいるためカーネルと判断。計算の内容は判断できず。","NonKernel","手続きrsurfが不明、カーネルと判定できる情報がない。ループ内にwriteが存在。","abinit-cmake_git","54f0edb","6104","src/14bader/surf.F90","457"
+"NonKernel","ソースよりWRITEのためのバッファへのデータ格納処理と判断。","M5","IFが多いが形としてはM5","VAPO_git","d93599f","404124","Precombustion/Mdot/OFShift/ver01/Mdot0_055/CALC/MainCEA/Mycompile.f","3258"
+"M5","LAPACKの一部であるが、テストプログラム。","NonKernel","#test","lapack_git","c697c62","156493","SRC/zlalsd.f","391"
+"Other","LAPACKの一部。テストプログラム。","M5","割り算多め","uquantchem_git","de43108","15124","lapack-3.4.0/SRC/chetri2x.f","413"
+"M2","FFT処理の呼び出し．FFTはある程度oncash化できるのでその想定とした．","Other","FFTを呼び出しているように見えるが，初期化データ読み出しの一部であるので，カーネルにしにくい印象．","GAMIL_git","cdaa2d9","3758","models/atm/gamil/src/dynamics/sld/spetru.F90","954"
+"NonKernel","メイン処理の前のデータのセット処理のように見えるためカーネルとしない。","NonKernel","回転数小さいと判定","ct-amoeba_git","bd42e13","8688","polarize.f","228"
+"M2","LAPACKのテストルーチン。アプリの形にもなっていない。","Other","LAPACKのテストルーチン","blas-lapack-ffi_git","781517b","14207","unused/lapack_cwrapper/testing/main/EIG/zchkst.f","555"
+"NonKernel","サブルーチン名、処理内容より境界条件の決定処理と判断しカーネル出会いと判断。","NonKernel","","dissertaion_phd_tamu_git","5c1d609","1439","chap_4_structural_analyses/pvdf_folding_beam/src/femgeometry.f90","893"
+"M5","タイムステップループ中にあり計算カーネルと判断。B/F値を信用しソースを見てもそれらしいことを確認。","NonKernel","Advectionの一部","CHYMERATEST_git","bed32b4","1182","flux.f","894"
+"Other","計算カーネルに見えない。値のセッドだけ。","NonKernel","nzones=1500。大分ループが小さいと判定。","MHD-Research_git","8cbda42","2723","spherical/ftw_fulldiv_wmpio.f90","1499"
+"Other","呼んでいるサブルーチンの内容がわからないためカーネルのタイプが判断できない．コメントもない．","Other","呼び出し先のサブルーチンの処理が不明だけど，頻度が高くカーネル相当と判断","Grendel_git","7e39a8d","606","src/intder/intder.f","5939"
+"M5","ループの深い部分にあり、計算処理の内部なのでカーネルと判定。BLAS内の処理。This is the unblocked form of the algorithm, calling Level 2 BLASのコメントよりブロッキングなしと判定。","M1","#test","exciting_git","08f755c","14044","src/LAPACK/zlauu2.f","167"
+"M4","B/F値とソースコードより判定。","Other","カーネルぽい雰囲気はある。","fvs_git","d14aa37","42988","nc/src/cratet.f","260"
+"Other","LAPACKの一部。テストプログラム。","Other","AXPY含むが、M5と判定できるループがない。","uquantchem_git","de43108","39128","lapack-3.4.0/TESTING/LIN/ztrt02.f","226"
+"M5","Carry out closure scaling and cfl scaling on updraught values
+コメントより計算処理と判定。ループの深いところでありメイン計算の一つと判断。","M5","NIMCAのnsw6に類似したコードに見えるが、この部分だけみるとそこまで複雑でないと判断。ただし、ループ回転数が小さい可能性があるので、あまりホットスポットにならない可能性が高い。","UM-ppsrc-vamkK_git","cd40696","29924","atmosphere/convection/dts_pc2.f90","222"
+"M6","繰り返しループ内にありカーネルと判断
+LISTを使用している","M6","","PyFVS_git","6b84273","39869","fire/ut/src/fmcfmd.f","442"
+"Other","dsg4setc12のサブルーチンがないため解読不能","Other","カーネルぽいが、回転数は小さい。手続き先の情報がないので他と判定。","darksusy_ucmh_git","21aedbb","10758","src/su/dsvertx3.f","1098"
+"M5","イタレーションループ内にありカーネルと判定。ソースコードで判断。","M5","","jules-ppsrc-valpm_git","30e6a33","34440","atmosphere/convection/update_conv_diags.f90","616"
+"Other","LAPACKのテストルーチン。アプリの形にもなっていない。","Other","テストルーチン。限りなくカーネルでない。SAXPY含む。","belgiovi-clmagma_git","516ca83","14313","testing/lin/ctpt03.f","155"
+"M1","コメントよりメインプログラムの一つでありカーネルと判断。ソースから行列行列積と判断。","M5","","abinit-cmake_git","54f0edb","3937","src/17ddb/instr9.F90","359"
+"M5","計算処理の中なのでカーネルと判断。
+ソースとB/F値より判断。","M5","","VAPO_git","d93599f","266327","N2O/ISP_CH4/LOX/MIXED_1_3/CEA/cea2.f","5416"
+"M5","LAPACKの一部。テストプログラム。","M5","#test","uquantchem_git","de43108","147950","BLAS/ctrsv.f","185"
+"M5","トレーサーの処理と判定","NonKernel","定義のみ","NOAA-GFDL-MOM6_git","143f313","3323","src/tracer/tracer_example.F90","476"
+"M5","LAPACKの一部。テストプログラム。","M5","Householder?","lapack_git","c697c62","1206","SRC/slarfx.f","537"
+"M5","LAPACKのDLASRルーチンの一部．行列処理の一部．","M2","LAPACKの一部","FPLAPW-KP_git","cf8b8da","17315","src/LAPACK/dlasr.f","247"
+"M1","テストルーチンでありアプリの形でもないのでカーネルとせず。","M5","LAPACKの一部","jburkardt-f77_git","f217575","34379","linpack_z/linpack_z_prb.f","3785"
+"M1","LAPACKテストルーチンの一部であるが、テストプログラム。","M1","#test","numpy-vendor_git","9820ec7","40402","atlas/src/lapack-lite-3.1.1/TESTING/LIN/crqt03.f","141"
+"NonKernel","本プログラムは，領域分割ツールのテストプログラム．このループはテスト結果の判定ループ．","NonKernel","回転数小さいと判断","cam_git","424f4b3","178","utils/pilgrim/unit_testers/ghosttest.F90","285"
+"M5","ソースとB/F値を見て判断。","M5","","VAPO_git","d93599f","412068","Precombustion/Mdot/OFShift/ver01/Mdot0_05/CALC/PreCEA/cea/cea2.f","5625"

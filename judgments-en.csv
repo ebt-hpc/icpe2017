@@ -1,0 +1,101 @@
+minami_kaz(judge),minami_kaz(comment),teraim(judge),teraim(comment),proj,ver,nid,path,lnum
+M2,According to the comment: Compute the Cholesky factorization A = U'*U. Loop-blocking should be applicable.,M1,,NEKCEM_git,1e1977e,8197,libs/netlib/lapack.f,262097
+NonKernel,Comments suggest that it is a data collection routine.,NonKernel,Seems this is a data setup routine.,carma-miriad_git,34b15af,53794,src/prog/misc/listobs.for,181
+M5,"Seems this is a solver routine in a time step loop, hence a kernel. It contains array element assignments.",NonKernel,Initialization.,CM1_git,fc4db52,4799,src/bc.F,2054
+M5,"Seems this is in some calculation routine, hence a kernel.",M5,Reduction.,VAPO_git,d93599f,94838,Precombustion/Mdot/OFShift/ver01/Mdot0_03/CALC/PreCEA/MainCEA/cea/cea2.f,1332
+Ignored,,NonKernel,,oorb_git,0ec2651,4042,classes/StochasticOrbit_class.f90,9296
+M2,"Seems this is a part of FFT. In principle, loop-blocking is applicable to some extent.",Other,,elk_git,610ccd4,11388,src/fftlib/cfftnd.f90,1123
+M6,Seems this does not have a ordinary iteration structure.,Other,"Looks like a kernel, though invfft is unknown.",q-e_git,1f12d22,34168,GWW/pw4gww/semicore.f90,47
+M5,A test routine of LAPACK.,M5,,blas-lapack-ffi_git,781517b,2232,unused/lapack_cwrapper/testing/main/LIN/claptm.f,173
+NonKernel,Not a time step loop.,NonKernel,Loop body too small.,dissertaion_phd_tamu_git,5c1d609,553,chap_5_active_trusses/codes_linear_tetra_hedral_truss/Elec_Mech_FEM/src/femgeometry.f90,422
+NonKernel,Seems this is not a computing part. Just a branching loop.,NonKernel,"Blocks that correspond to the following:- TEST(17) WRITE OUT READ-IN COEFFICIENTS  (I/O UNITS 12 & 16)- TEST(18) ENTHALPY IS ABSOLUTE",VAPO_git,d93599f,21011,Precombustion/Mdot/OFShift/ver01/Mdot0_07/CALC/MainCEA/pac/pac99.f,4957
+M5,"According to the comment: Determine the diffuse transmission and reflection coefficients.It is placed deep in nested loops.",NonKernel,Not so complex.,UM-ppsrc-vamkK_git,cd40696,19601,atmosphere/boundary_layer/dust_srce.f90,174
+M5,According to the comment: Determine the diffuse transmission and reflection coefficients.,M3,"Looks like M5, and somewhat like nsw6 of NICAM. It has many operations.",UM-ppsrc-vamkK_git,cd40696,11162,atmosphere/radiance_core/trans_source_coeff.f90,147
+Other,A part of LAPACK.,M1,,numpy-vendor_git,9820ec7,135601,atlas/src/lapack-lite-3.1.1/SRC/dlasyf.f,542
+M5,A LAPACK test routine. In ZLASCL.,M5,,OpenBLAS_git,a96a4cb,96450,lapack-netlib/SRC/zlascl.f,291
+M5,A part of divide-and-conquer singular value decomposition. I'm not sure loop-blocking is applicable.,M5,,PROPACK_git,2465f89,4448,complex8/Lapack_Util/slasd2.f,240
+NonKernel,A part of post-processing.,NonKernel,A part of a utility.,jules-ppsrc-valpm_git,30e6a33,54670,utility/fieldcalc/cld_turb.f90,191
+NonKernel,A search and write routine.,NonKernel,,VAPO_git,d93599f,130019,N2O/ISP_CH4/LOX/MIXED_1_7/CEA/cea/cea2.f,4648
+M5,"This is placed deep in nested loops. Unknown application. In principle, loop-blocking is applicable since it uses 2-dimensional arrays in 3 nested loops.",M5,,gops_git,3de1c58,34898,GMIN/CSMinit.f90,2991
+M5,By inspecting the source.,M5,Initialization?,VAPO_git,d93599f,241738,Precombustion/Mdot/temp/OFShift/PreCEA/Mycompile.f,388
+NonKernel,Outside of a time step loop.,M5,3 nested loops.,ED2_git,8ae79fd,5384,BRAMS/src/isan/refstate.f90,300
+Ignored,,NonKernel,"Small loop body, small number of operations.",danfe_git,5013c77,2461,libsrc/k_mesh.f,6495
+NonKernel,A file read routine.,NonKernel,Not a kernel at all.,VAPO_git,d93599f,275330,N2O/ISP_CH4/LOX/MIXED_1_5/CEA/cea/b1b2b3.f,162
+M5,A test routine of FFT.,M5,A part of FFT.,GISS_climate_model_git,3b41985,2397,model/FFT288.f,370
+M5,"According to the comments in the subroutine, this computes interactions of colloidal particles. It is in a convergence loop.",M6,Typical indirect references.,MCF_git,7fb9b4e,2390,mcf/src/particles_collect_colloid_interaction.F90,93
+M5,By inspecting the source.,M5,,VO63-gotm_git,b8770b1,1268,code/shelfbreak/src/wind_stress.f90,34
+M1,It calls BLAS_gemm and computes something for each block.,M1,,GITM_git,233d5c7,1860,share/Library/src/ModLinearSolver.f90,1192
+NonKernel,A part of LAPACK test routine.,NonKernel,A part of a kernel.,numpy-vendor_git,9820ec7,8577,atlas/src/lapack-lite-3.1.1/TESTING/LIN/slattb.f,206
+M5,A part of ZLASR subroutine of lapack.,M5,,elk_git,610ccd4,6877,src/LAPACK/zlasr.f,281
+M5,It is in an iteration loop. Some write-statements are seen in the loop.,NonKernel,,saga5.5_git,7c99e8f,18234,src/copy021014/mh.f,530
+NonKernel,A post-processing routine that computes inner-products.,M5,Reduction.,CAABA_git,dfcb68b,72,mecca/kpp/drv/general_complete.f90,64
+Other,A LAPACK test routine.,M4,"It calls library routines. It seems to be M4 since it has a long block, while it may also be M1.",OpenBLAS_git,a96a4cb,98449,lapack-netlib/TESTING/EIG/dget38.f,186
+Ignored,Seems it is not a kernel.,NonKernel,Small iteration count.,pyavl_git,714c227,669,avl/src/amode.f,922
+M5,According to the comment: Carry out closure scaling and cfl scaling on updraught values. Seems this is one of the main computation routines deep in nested loops.,M5,,UM-ppsrc-vamkK_git,cd40696,33306,atmosphere/convection/update_conv_diags.f90,489
+Other,It is in a main driver. I'm not sure what it does.,M4,2 or 3 nested loops. The inner-most loop is complex.,abinit_git,1436bcc,7934,src/63_bader/cpdrv.F90,536
+M5,It is in the main routine.,NonKernel,"Small loop body, small number of operations.",fmmlib3d_git,af4f0a0,1909,src/helmrouts3d.f,3578
+NonKernel,"A small program of 500 lines. Seems not a kernel, though it performs some fft and spline.",NonKernel,Looks like an initialization routine.,powerspec_git,b4491a8,390,fiber_collision/FFT-fkp-mock-dr11-v7p0-noweight_960grid.f,86
+NonKernel,"According to the comment, this performs quantum calculation. But, it does not have remarkable loops.",NonKernel,Loop body too small.,ecalj_git,b163165,40394,fpgw/main/hx0fp0.sc.m.F,408
+M5,"A part of ZLASR routine of LAPACK. According to the source, it is M5, though loop-blocking may be appicable.",M5,A part of lapack.,espresso-4.0.3_git,2e70494,38645,flib/lapack_atlas.f,10979
+M5,This is in a time step loop. It has references to 3-dimensional arrays.,M5,,ED2_git,8ae79fd,12491,BRAMS/src/turb/turb_diff.f90,247
+NonKernel,"This part performs min/max. According to the comment of top level routine ma2 and the name of the parent routine dumpit, it should not be main computation.",NonKernel,"A part of dump program, computing min/max of something.",CADD_git,3027601,1717,Modular/tecplotnl.f,440
+M5,In a solver in a time step loop. Difference calculation.,M5,Stencil.,CM1_git,fc4db52,2262,src/sfcphys.F,246
+M1,A triangular matrix routine of BLAS.,M5,,ode-ampsim_git,9faa6c8,10735,lib/flens/cxxblas/netlib/blas/dtrsm.f,228
+M5,Difference computation in a time step loop. According to the B/F.,M5,Typical 3 nested loops. Stencil.,ED2_Erelax_git,206f380,11969,BRAMS/src/turb/rgrad.f90,376
+M5,A part of a test program.,NonKernel,Only definitions or something.,OpenBLAS_git,a96a4cb,132221,ctest/c_cblat2.f,2874
+Other,In a convergence loop. Maybe 2-body computation of in-cell particles. Low B/F if 2-body force calculation.,M6,,MCF_git,7fb9b4e,2820,mcf/src/particles_compute_density.F90,578
+NonKernel,Looks like an I/O routine.,NonKernel,,VAPO_git,d93599f,72339,Precombustion/Mdot/OFShift/ver01/Mdot0_045/CALC/MainCEA/cea/cea2.f,1214
+M5,In a main routine in a kernel.,M5,Iteration count MXFLCL seems not to be so large. But a part of a kernel in appearance.,open-fvs_git,ec493a7,37202,fire/base/src/fmsoilheat.f,89
+NonKernel,Too small iteration count.,NonKernel,"Too small iteration count. However, some procedures may have considerable number of operations.",HZG_MatrixElement_git,a315942,4900,HiggsZGAnalyzer/hzgammaME/MCFM-6.6/QCDLoop/ff/ffdcxs.f,165
+Other,In an iteration loop. ctqmc_make_compare is missing.,NonKernel,I guess this loop calls kernels.,iqist_git,35ea908,3347,src/ctqmc/azalea/ctqmc_flavor.f90,1810
+M5,Unknown application. Deep in nested loops. According to the source code.,M5,,gops_git,3de1c58,34718,a/g.CSMinit.f90,4781
+M6,In an iteration loop. Has indirect array references.,NonKernel,Definitions only.,PyFVS_git,6b84273,43373,rd/src/rdsprd.f,217
+M5,Seems to compute something.,M5,"The array eigenvalue is in j,k-loop, another DFT_dos is in i-loop.",DOS_git,2a96991,26,dos_kpt/dos_kpt_fixed.f90,91
+M5,A part of main computation.,M5,Reduction.,DFPT-tetra_git,22abe7a,47686,PW/src/vcsubs.f90,823
+NonKernel,A part of boundary condition setup routine.,NonKernel,Too small loop body.,dissertaion_phd_tamu_git,5c1d609,685,chap_4_structural_analyses/afc_unit_cell/wxp_different_frequencies/1540214.login006.sc.cluster.tamu/src/femgeometry.f90,2614
+M5,DLATTB generates a triangular test matrix in 2-dimensional storage. A subroutine of LAPACK.,M5,,coin_git,b377a3f,55494,ThirdParty/lapack/TESTING/LIN/dlattb.f,641
+NonKernel,A part of potential table setup. Looks like an initialization routine.,NonKernel,Seems the whole program does not have main computing part.,squarer_git,5c31ab0,1797,sqdir/old_potgens/potgen_bomc4.f,107
+M5,Stencil code.,M5,The iteration count seems to be the number of particles.,Hybrid-code-fortran-90_git,65eb928,132,gutsp.f90,239
+M2,"Unknown application. Deep in nested loops. 1-dimensional arrays in 2 nested loops, where blocking is applicable in principle.",M5,,gops_git,3de1c58,51478,a/g.vgw.f90,1018
+M5,A test routine. In an iterative calculation.,NonKernel,Too small loop body.,jburkardt-f_git,2a3860f,87348,slatec/slatec.f90,150705
+M5,In a solver in a time step loop. Min/max loop.,NonKernel,Correction value calculation that follows a kernel.,CM1_git,fc4db52,4834,src/bc.F,2297
+M2,"According to the comment, this is a part of Fourier transformation (not FFT). In principle, loop-blocking is applicable.",M5,"Inner-products or something, and reduction.",espresso-4.0.3_git,2e70494,20892,W90/src/hamiltonian.F90,261
+M5,"A part of DLASR of LAPACK. According to the code itself, though blocking may be applicable.",M5,,cp2k_git,e340926,5806,potentials/Goedecker/pseudo/v2.3/sub_lapack.F,2796
+M4,Calculates something. According to B/F.,NonKernel,Seems the iteration count is small.,VAPO_git,d93599f,155712,Precombustion/Mdot/OFShift/ver01/Mdot0_04/CALC/PreCEA/MainCEA/pac/pac99.f,2851
+Other,In a test routine of DLALN2 of LAPACK.,M4,,OG-Lapack_git,4a24271,110292,TESTING/EIG/dget31.f,189
+M2,"According to the source and the comment, it is a matrix solver based on a direct method. Blocking is applicable.",M5,,VAPO_git,d93599f,74004,Precombustion/Mdot/test/PreCEA/pac/pac99.f,2769
+M5,"In an iteration loop. According to the source, it is M5.",Other,Procedure shearm is missing.,Perplex_git,7f830a1,8999,source/olib.f,91
+M5,According to the comment: Carry out closure scaling and cfl scaling on updraught values. A part of main computation deep in nested loops.,M5,,UM-ppsrc-vamkK_git,cd40696,25919,atmosphere/convection/shallow_conv-shconv5a.f90,2410
+M2,According to the comment: Compute the change of xc potential due to the perturbation.,Other,Contains axpy. Contains kernel-like procedures. Cannot classify as a whole.,quantum-espresso_git,37def7f,26130,PH/addnlcc.f90,81
+M5,According to the source.,NonKernel,Too small loop body.,VAPO_git,d93599f,392599,Precombustion/Mdot/OFShift/ver01/Mdot0_075/CALC/PreCEA/cea2.f,1681
+Other,"According to the comment, this is a test routine of LAPACK.",Other,A test routine.,belgiovi-clmagma_git,516ca83,10037,testing/lin/sdrvrf3.f,116
+M2,"Unknown application. Deep in nested loops. 2-dimensional arrays in 3 nested loops, where loop blocking is applicable in principle.",M5,,gops_git,3de1c58,28723,G/AT.f,59
+Other,This calls the main routine surf. I'm not sure what it does.,NonKernel,Procedure rsurf is missing. No evidence of kernel. The loop contains some writes.,abinit-cmake_git,54f0edb,6104,src/14bader/surf.F90,457
+NonKernel,Seems this performs data buffering for WRITE.,M5,Has many IFs. Maybe M5.,VAPO_git,d93599f,404124,Precombustion/Mdot/OFShift/ver01/Mdot0_055/CALC/MainCEA/Mycompile.f,3258
+M5,A part of LAPACK test program.,NonKernel,,lapack_git,c697c62,156493,SRC/zlalsd.f,391
+Other,A part of LAPACK test program.,M5,Many divisions.,uquantchem_git,de43108,15124,lapack-3.4.0/SRC/chetri2x.f,413
+M2,"Calls FFT. In principle, FFT can benefit from cache memories to some extent.",Other,"A part of initialization data loading routine. Though this loop seems to call FFT, it is probably not a kernel.",GAMIL_git,cdaa2d9,3758,models/atm/gamil/src/dynamics/sld/spetru.F90,954
+NonKernel,Looks like a data setup routine before the main routine.,NonKernel,Too small iteration count,ct-amoeba_git,bd42e13,8688,polarize.f,228
+M2,A test routine of LAPACK.,Other,A test routine of LAPACK.,blas-lapack-ffi_git,781517b,14207,unused/lapack_cwrapper/testing/main/EIG/zchkst.f,555
+NonKernel,The name and the source of the subroutine tells it is not a kernel.,NonKernel,,dissertaion_phd_tamu_git,5c1d609,1439,chap_4_structural_analyses/pvdf_folding_beam/src/femgeometry.f90,893
+M5,"In a time step loop, hence a kernel. The B/F and the source also proves it.",NonKernel,A part of Advection.,CHYMERATEST_git,bed32b4,1182,flux.f,894
+Other,Does not look like a kernel. Just setting values.,NonKernel,nzones=1500. A very small loop.,MHD-Research_git,8cbda42,2723,spherical/ftw_fulldiv_wmpio.f90,1499
+Other,Subroutine code is missing. Could not determine the kernel class. No comments.,Other,Called subroutine is missing. According to the frequency.,Grendel_git,7e39a8d,606,src/intder/intder.f,5939
+M5,"A part of some computation deep in nested loops. In BLAS. According to the comment: This is the unblocked form of the algorithm, calling Level 2 BLAS, bloking is not applicable.",M1,,exciting_git,08f755c,14044,src/LAPACK/zlauu2.f,167
+M4,According to the B/F and the source.,Other,Smells like an kernel.,fvs_git,d14aa37,42988,nc/src/cratet.f,260
+Other,A test program of LAPACK.,Other,This contains AXPY. It does not have any loops that suggest M5.,uquantchem_git,de43108,39128,lapack-3.4.0/TESTING/LIN/ztrt02.f,226
+M5,According to the comment: Carry out closure scaling and cfl scaling on updraught values. A part of main computation deep in nested loops.,M5,"This looks like nsw6 of NICAM. However, it is not so complex. The iteration count seems to be small, hence it is probably not a hot spot.",UM-ppsrc-vamkK_git,cd40696,29924,atmosphere/convection/dts_pc2.f90,222
+M6,This is in an iteration loop. It has indirect array references.,M6,,PyFVS_git,6b84273,39869,fire/ut/src/fmcfmd.f,442
+Other,Code of subroutine dsg4setc12 is missing.,Other,Smells like a kernel. But the iteration count is small. Source code of a subroutine is missing.,darksusy_ucmh_git,21aedbb,10758,src/su/dsvertx3.f,1098
+M5,This is in an iteration loop.  According to the source.,M5,,jules-ppsrc-valpm_git,30e6a33,34440,atmosphere/convection/update_conv_diags.f90,616
+Other,A test routine of LAPACK. Not an application.,Other,A test routine. Not a kernel at all. It contains SAXPY.,belgiovi-clmagma_git,516ca83,14313,testing/lin/ctpt03.f,155
+M1,"According to the comment, this is a main program.  Matrix-matrix multiplication.",M5,,abinit-cmake_git,54f0edb,3937,src/17ddb/instr9.F90,359
+M5,A part of some computation. According to the soruce and B/F.,M5,,VAPO_git,d93599f,266327,N2O/ISP_CH4/LOX/MIXED_1_3/CEA/cea2.f,5416
+M5,A test program of LAPACK.,M5,,uquantchem_git,de43108,147950,BLAS/ctrsv.f,185
+M5,A routine for a tracer.,NonKernel,Definitions only.,NOAA-GFDL-MOM6_git,143f313,3323,src/tracer/tracer_example.F90,476
+M5,A test program of LAPACK.,M5,Householder?,lapack_git,c697c62,1206,SRC/slarfx.f,537
+M5,"A part of DLASR routine of LAPACK, which handles Matrices.",M2,A part of LAPACK.,FPLAPW-KP_git,cf8b8da,17315,src/LAPACK/dlasr.f,247
+M1,A test routine. Not an application.,M5,A part of LAPACK.,jburkardt-f77_git,f217575,34379,linpack_z/linpack_z_prb.f,3785
+M1,A part of LAPACK test routine.,M1,,numpy-vendor_git,9820ec7,40402,atlas/src/lapack-lite-3.1.1/TESTING/LIN/crqt03.f,141
+NonKernel,A test program for domain decomposition routines. This loop checks test results.,NonKernel,Small iteration count.,cam_git,424f4b3,178,utils/pilgrim/unit_testers/ghosttest.F90,285
+M5,According to the source and its B/F.,M5,,VAPO_git,d93599f,412068,Precombustion/Mdot/OFShift/ver01/Mdot0_05/CALC/PreCEA/cea/cea2.f,5625
