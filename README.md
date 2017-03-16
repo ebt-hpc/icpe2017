@@ -1,8 +1,8 @@
 # CCA/EBT Experiments
 
 This directory contains the raw results of the experiments reported in
-an ICPE2017 paper: An Empirical Study of Computation-Intensive Loops for
-Identifying and Classifying Loop Kernels.
+an ICPE2017 paper:
+*An Empirical Study of Computation-Intensive Loops for Identifying and Classifying Loop Kernels*.
 
 We have selected approximately 1000 projects tagged with "language:FORTRAN"
 hosted on [GitHub](https://github.com).
@@ -18,7 +18,7 @@ experienced performance engineers.
 |`metrics.csv`        | Source code metrics of 175,963 loops from 1020 projects hosted on GitHub |
 |`judgments.csv`      | Manual classification results for the sampled 100 loops (comments written in Japanese) |
 |`judgments-en.csv`   | Manual classification results for the sampled 100 loops (comments translated into English)|
-|`training_set.csv`   | Training set for loop classification (M1--6, Other, NonKernel) |
+|`training_set.csv`   | Training set for loop classification (M1-6, Other, NonKernel) |
 |`training_set_k.csv` | Training set for loop classification (Kernel, NonKernel) |
 |`training_set_m5.csv`| Training set for loop classification (M5, None: kernel other than M5) |
 
