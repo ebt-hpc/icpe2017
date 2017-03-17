@@ -56,7 +56,7 @@ NonKernel,A part of boundary condition setup routine.,NonKernel,Too small loop b
 M5,DLATTB generates a triangular test matrix in 2-dimensional storage. A subroutine of LAPACK.,M5,,coin_git,b377a3f,55494,ThirdParty/lapack/TESTING/LIN/dlattb.f,641
 NonKernel,A part of potential table setup. Looks like an initialization routine.,NonKernel,Seems the whole program does not have main computing part.,squarer_git,5c31ab0,1797,sqdir/old_potgens/potgen_bomc4.f,107
 M5,Stencil code.,M5,The iteration count seems to be the number of particles.,Hybrid-code-fortran-90_git,65eb928,132,gutsp.f90,239
-M2,"Unknown application. Deep in nested loops. 1-dimensional arrays in 2 nested loops, where blocking is applicable in principle.",M5,,gops_git,3de1c58,51478,a/g.vgw.f90,1018
+M2,"Unknown application. Deep in nested loops. 1-dimensional arrays in 2 nested loops, where blocking is applicable in principle. The iteration count k(=3) is so small that I cannot regard the loop as a true loop.",M5,,gops_git,3de1c58,51478,a/g.vgw.f90,1018
 M5,A test routine. In an iterative calculation.,NonKernel,Too small loop body.,jburkardt-f_git,2a3860f,87348,slatec/slatec.f90,150705
 M5,In a solver in a time step loop. Min/max loop.,NonKernel,Correction value calculation that follows a kernel.,CM1_git,fc4db52,4834,src/bc.F,2297
 M2,"According to the comment, this is a part of Fourier transformation (not FFT). In principle, loop-blocking is applicable.",M5,"Inner-products or something, and reduction.",espresso-4.0.3_git,2e70494,20892,W90/src/hamiltonian.F90,261
