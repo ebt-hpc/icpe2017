@@ -9,6 +9,7 @@ hosted on [GitHub](https://github.com).
 The loops from the projects were analyzed by [CCA/EBT](https://github.com/ebt-hpc/cca)
 to obtain loop features.
 You can see the outlines of the loops at [here](http://ngse.riken.jp/outline).
+(Please follow the rightmost "Version" link of a project.)
 From the loops, 100 are randomly sampled and are classified manually by a couple of
 experienced performance engineers.
 
