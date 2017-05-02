@@ -2,7 +2,7 @@
 
 This directory contains the raw results of the experiments reported in
 an [ICPE2017](https://icpe2017.spec.org) paper:
-[*An Empirical Study of Computation-Intensive Loops for Identifying and Classifying Loop Kernels*](https://stair.center/wp-content/uploads/2017/04/ebt-icpe2017.pdf).
+[*An Empirical Study of Computation-Intensive Loops for Identifying and Classifying Loop Kernels*](https://stair.center/archives/research/an-empirical-study-of-computation-intensive-loops-for-identifying-and-classifying-loop-kernels).
 
 We have selected approximately 1000 projects tagged with "language:FORTRAN"
 hosted on [GitHub](https://github.com).
